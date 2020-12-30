@@ -5,6 +5,8 @@ class Movie < ApplicationRecord
     attributes :title, :actors, :genres, :alternate_names, :year
   end
 
+  algoliasearch auto_index: true, auto_remove: true
+
   validates :title, presence: true
   has_many :alternate_names
   has_and_belongs_to_many :actors, join_table: 'movie_actors'

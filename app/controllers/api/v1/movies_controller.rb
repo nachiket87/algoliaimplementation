@@ -3,7 +3,7 @@ module Api
     class MoviesController < ApplicationController
       protect_from_forgery with: :null_session
       def index
-        @movies = Movie.first(1)
+        @movies = Movie.search(params[:title])
         render json: MovieSerializer.new(@movies, options).serializable_hash.to_json
       end
 
