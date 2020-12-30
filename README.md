@@ -1,24 +1,28 @@
-# README
+# Rails + React Dream Stack
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+This is a practice full-stack application that includes
 
-Things you may want to cover:
+## Rails Backend
 
-* Ruby version
+- Includes a Postgres database with a list of 2000+ movies seeded.
+- Includes Algolia indexed search terms
 
-* System dependencies
+- the backend, responsible for:
+  - handling the HTTP routing;
+  - storing items in a database;
+  - indexing items in an Algolia index when they change;
 
-* Configuration
+## React Frontend
 
-* Database creation
+React front end SPA that can be used to search for, delete, and add new movies along with the [Algolia JS client](https://github.com/algolia/algoliasearch-client-js). Remember, you might not need Redux :).
 
-* Database initialization
+- the search page needs to:
 
-* How to run the test suite
+  - display a searchbox to search in the movies using Algolia;
+  - show the results as a list or table;
+  - it should be possible to delete any item in the results using the Backend API;
 
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+- the form page needs to:
+  - display a form to create a new item;
+  - validates that the data has the correct format;
+  - use the Backend API to add the item to the DB and Algolia.
