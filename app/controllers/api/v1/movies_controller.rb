@@ -22,6 +22,15 @@ module Api
         end
       end
 
+      def destroy
+        movie = Movie.find(params[:id])
+        if movie.destroy
+          head :no_content
+        else
+          render json: { error: movie.errors.message }, status: 422
+        end
+      end
+
       private
 
       def options
