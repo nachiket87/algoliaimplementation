@@ -1,8 +1,9 @@
 # Rails + React Dream Stack
 
-This is a practice full-stack application that includes
+This is a practice full-stack application that includes a backend database of over 5000 movies indexed with Algolia.
+A front end SPA with react that includes a search bar, a new movie sumbission form, a movie delete option.
 
-## To-Do
+## Project Pending Tasks
 
 - [x] Backend database seed
 - [x] Index records with Algolia
