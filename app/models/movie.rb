@@ -2,7 +2,7 @@ class Movie < ApplicationRecord
   include AlgoliaSearch
 
   algoliasearch do 
-    attributes :title, :actors, :genres, :alternate_names
+    attributes :title, :actors, :genres, :alternate_names, :year
   end
 
   validates :title, presence: true
