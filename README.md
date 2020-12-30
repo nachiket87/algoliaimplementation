@@ -6,10 +6,13 @@ This is a practice full-stack application that includes
 
 - [x] Backend database seed
 - [x] Index records with Algolia
-- [ ] Create controllers and routes
-- [ ] Front End Search
-- [ ] Front End Delete
+- [x] Create controllers and routes
+- [x] Create, Index, Destroy routes for Movies
+- [x] Front End Search
 - [ ] Front End New Movie Form
+- [ ] Front End Delete
+
+Run Rspec to test - currently only tests http get request and models
 
 ## Rails Backend
 
