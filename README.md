@@ -2,6 +2,15 @@
 
 This is a practice full-stack application that includes
 
+## To-Do
+
+- [x] Backend database seed
+- [x] Index records with Algolia
+- [ ] Create controllers and routes
+- [ ] Front End Search
+- [ ] Front End Delete
+- [ ] Front End New Movie Form
+
 ## Rails Backend
 
 - Includes a Postgres database with a list of 2000+ movies seeded.
