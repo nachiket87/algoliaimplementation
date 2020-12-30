@@ -12,7 +12,11 @@ This is a practice full-stack application that includes
 - [ ] Front End New Movie Form
 - [ ] Front End Delete
 
-Run Rspec to test - currently only tests http get request and models
+## Spec Testing
+
+- Run Rspec to test
+  - Http get requests
+  - Models
 
 ## Rails Backend
 
