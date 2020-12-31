@@ -5,7 +5,7 @@ import { useDebouncedCallback } from "use-debounce";
 
 const App = () => {
   const [movies, setMovies] = useState();
-  const [searchTerm, setSearchTerm] = useState("Star Wars");
+  const [searchTerm, setSearchTerm] = useState("The Matrix");
 
   useEffect(() => {
     fetchData(searchTerm, setMovies);

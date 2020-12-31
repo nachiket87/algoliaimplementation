@@ -7,6 +7,7 @@ const fetchData = (searchTerm, setMovies) => {
   const getData = async () => {
     const data = await index.search(`${searchTerm}`);
     setMovies(data.hits);
+    console.log(data.hits);
     return data;
   };
   getData();
