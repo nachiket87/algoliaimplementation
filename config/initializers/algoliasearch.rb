@@ -1,6 +1,6 @@
 AlgoliaSearch.configuration = { 
-  application_id: process.env.appID, 
-  api_key: process.env.adminAPI,
+  application_id: ENV['appID'], 
+  api_key: ENV['adminAPI'],
   connect_timeout: 2,
   receive_timeout: 30,
   send_timeout: 30,
