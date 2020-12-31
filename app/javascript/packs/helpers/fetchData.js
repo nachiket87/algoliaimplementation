@@ -1,11 +1,11 @@
-import axios from "axios";
+const algoliasearch = require("algoliasearch");
+const client = algoliasearch("6XU8A3UQ7F", "c82364b5d1d8961392c091ead329f573");
+const index = client.initIndex("Movie");
 
 const fetchData = (searchTerm, setMovies) => {
   const getData = async () => {
-    const data = await axios.get(`/api/v1/movies`, {
-      params: { title: `${searchTerm}` },
-    });
-    setMovies(data.data);
+    const data = await index.search(`${searchTerm}`);
+    setMovies(data.hits);
     return data;
   };
   getData();

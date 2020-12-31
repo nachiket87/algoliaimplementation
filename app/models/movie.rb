@@ -2,7 +2,6 @@ class Movie < ApplicationRecord
   include AlgoliaSearch
 
   algoliasearch do 
-    attributes :title, :actors, :genres, :alternate_names, :year
   end
 
   algoliasearch auto_index: true, auto_remove: true

@@ -14,10 +14,10 @@ const App = () => {
   let rnMovie = [];
 
   if (movies) {
-    rnMovie = movies.data.map((movie) => {
+    rnMovie = movies.map((movie) => {
       return (
-        <li className={"list-group-item"} key={movie.attributes.objectid}>
-          {movie.attributes.title} ({movie.attributes.year})
+        <li className={"list-group-item"} key={movie.objectID}>
+          {movie.title} ({movie.year})
         </li>
       );
     });
