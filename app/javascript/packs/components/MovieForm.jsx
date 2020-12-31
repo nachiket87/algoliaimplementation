@@ -17,7 +17,7 @@ const MovieForm = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
     axios
-      .post("api/v1/movies", movieData)
+      .post("https://moviedb87.herokuapp.com/api/v1/movies", movieData)
       .then((response) => console.log(response))
       .catch((response) => console.log(response));
   };
