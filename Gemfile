@@ -60,3 +60,5 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 gem "algoliasearch-rails", "~> 1.25"
 
 gem "jsonapi-serializer", "~> 2.1"
+
+gem "rack-cors", "~> 1.1"

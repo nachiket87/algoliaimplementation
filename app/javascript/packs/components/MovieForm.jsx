@@ -16,7 +16,6 @@ const MovieForm = () => {
   };
   const handleSubmit = (e) => {
     e.preventDefault();
-    console.log(movieData);
     axios
       .post("api/v1/movies", movieData)
       .then((response) => console.log(response))
