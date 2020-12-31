@@ -1,47 +1,17 @@
-import React, { useEffect, useState } from "react";
-import fetchData from "../helpers/fetchData.js";
-import { Input } from "reactstrap";
-import { useDebouncedCallback } from "use-debounce";
+import React from "react";
+import MovieList from "./MovieList";
+import MovieForm from "./MovieForm";
+import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 
 const App = () => {
-  const [movies, setMovies] = useState();
-  const [searchTerm, setSearchTerm] = useState("The Matrix");
-
-  useEffect(() => {
-    fetchData(searchTerm, setMovies);
-  }, [searchTerm]);
-
-  let rnMovie = [];
-
-  if (movies) {
-    rnMovie = movies.map((movie) => {
-      return (
-        <li className={"list-group-item"} key={movie.objectID}>
-          {movie.title} ({movie.year})
-        </li>
-      );
-    });
-  }
-
-  const debounced = useDebouncedCallback((value) => {
-    setSearchTerm(value.trim());
-  }, 1000);
-
   return (
     <div className="container my-3">
-      <div className="row d-flex">
-        <div className="col lg-12">
-          <Input
-            onChange={(e) => debounced.callback(e.target.value)}
-            placeholder={`Search for a Movie`}
-          />
-        </div>
-      </div>
-      <div className="row my-2">
-        <div className="col">
-          <ul className={"list-group"}>{rnMovie}</ul>
-        </div>
-      </div>
+      <Router>
+        <Switch>
+          <Route exact path="/" component={MovieList} />
+          <Route exact path="/add" component={MovieForm} />
+        </Switch>
+      </Router>
     </div>
   );
 };

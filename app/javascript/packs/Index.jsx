@@ -6,15 +6,9 @@ import React from "react";
 import ReactDOM from "react-dom";
 import App from "./components/App.jsx";
 
-const Index = () => (
-  <>
-    <App />
-  </>
-);
-
 document.addEventListener("DOMContentLoaded", () => {
   ReactDOM.render(
-    <Index />,
+    <App />,
     document.body.appendChild(document.createElement("div"))
   );
 });
