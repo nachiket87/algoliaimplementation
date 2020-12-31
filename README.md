@@ -3,6 +3,11 @@
 This is a practice full-stack application that includes a backend database of over 5000 movies indexed with Algolia.
 A front end SPA with react that includes a search bar, a new movie sumbission form, a movie delete option.
 
+## Deployed here:
+
+https://moviedb87.herokuapp.com
+[Movie Database](https://moviedb87.herokuapp.com)
+
 ## Project Pending Tasks
 
 - [x] Backend database seed
@@ -11,7 +16,7 @@ A front end SPA with react that includes a search bar, a new movie sumbission fo
 - [x] Create, Index, Destroy routes for Movies
 - [x] Front End Search
 - [x] Front End Search with Algolia (no backend pings)
-- [ ] Front End New Movie Form
+- [x] Front End New Movie Form
 - [ ] Front End Delete
 
 ## Spec Testing
