@@ -14,17 +14,13 @@ const MovieForm = () => {
       setMovieData({ ...movieData, [target.name]: target.value });
     }
   };
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    axios
-      .post("api/v1/movies", movieData)
-      .then((response) => console.log(response))
-      .catch((response) => console.log(response));
+  const handleSubmit = () => {
+    axios.post("api/v1/movies", movieData);
   };
   return (
     <div>
       <h1>Add a Movie</h1>
-      <Form onSubmit={(e) => handleSubmit(e)}>
+      <Form onSubmit={() => handleSubmit()}>
         <FormGroup>
           <Label for="title">Movie Title</Label>
           <Input

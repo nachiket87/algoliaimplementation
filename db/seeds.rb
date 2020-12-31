@@ -12,7 +12,7 @@ file = File.read('movies.json')
 
 data_hash = JSON.parse(file)
 
-data_hash.each do |m|
+data_hash.first(1000) do |m|
   title = m["title"]
   year = m["year"].to_i
   image = m["image"]
