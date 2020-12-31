@@ -10,6 +10,7 @@ A front end SPA with react that includes a search bar, a new movie sumbission fo
 - [x] Create controllers and routes
 - [x] Create, Index, Destroy routes for Movies
 - [x] Front End Search
+- [x] Front End Search with Algolia (no backend pings)
 - [ ] Front End New Movie Form
 - [ ] Front End Delete
 
