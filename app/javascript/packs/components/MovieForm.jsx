@@ -20,6 +20,7 @@ const MovieForm = () => {
   return (
     <div>
       <h1>Add a Movie</h1>
+      <CustomAutocomplete />
       <Form onSubmit={() => handleSubmit()}>
         <FormGroup>
           <Label for="title">Movie Title</Label>
