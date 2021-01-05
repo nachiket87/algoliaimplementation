@@ -18,6 +18,9 @@ const MovieForm = () => {
 
   const handleSubmit = (event) => {
     event.preventDefault();
+
+    const csrfToken = document.querySelector("[name=csrf-token]").content;
+    axios.defaults.headers.common["X-CSRF-TOKEN"] = csrfToken;
     axios.post("api/v1/movies", movieData).then(() => {
       setRedirectStatus(true);
     });
