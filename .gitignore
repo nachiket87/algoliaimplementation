@@ -35,5 +35,5 @@
 yarn-debug.log*
 .yarn-integrity
 node_modules/
-config/initializers/algoliasearch.rb
-app/javascript/packs/helpers/apikeys.js
+#config/initializers/algoliasearch.rb
+#app/javascript/packs/helpers/apikeys.js
