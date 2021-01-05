@@ -32,7 +32,6 @@ const MovieList = () => {
     <>
       <div className="row d-flex">
         <div className="col lg-12">
-          <AutoComplete />
           <Input
             type="search"
             onChange={(e) => debounced.callback(e.target.value)}

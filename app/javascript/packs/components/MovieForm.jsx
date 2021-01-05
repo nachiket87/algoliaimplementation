@@ -1,10 +1,11 @@
 import React, { useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, Redirect } from "react-router-dom";
 import { Form, FormGroup, Input, Label, Button } from "reactstrap";
 import axios from "axios";
 
 const MovieForm = () => {
   const [movieData, setMovieData] = useState({});
+  const [redirectStatus, setRedirectStatus] = useState(false);
 
   const handleChange = (target) => {
     if (target.name === "year") {
@@ -14,14 +15,18 @@ const MovieForm = () => {
       setMovieData({ ...movieData, [target.name]: target.value });
     }
   };
-  const handleSubmit = () => {
-    axios.post("api/v1/movies", movieData);
+
+  const handleSubmit = (event) => {
+    event.preventDefault();
+    axios.post("api/v1/movies", movieData).then(() => {
+      setRedirectStatus(true);
+    });
   };
+  if (redirectStatus) return <Redirect to="/" />;
   return (
     <div>
       <h1>Add a Movie</h1>
-      <CustomAutocomplete />
-      <Form onSubmit={() => handleSubmit()}>
+      <Form onSubmit={(event) => handleSubmit(event)}>
         <FormGroup>
           <Label for="title">Movie Title</Label>
           <Input
